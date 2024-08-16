@@ -95,8 +95,6 @@ module "snowflake_user" {
   network_policy             = "my_network_policy"
   allowed_ip_list            = ["192.0.2.0", "203.0.113.0"]
   blocked_ip_list            = ["192.0.2.1", "203.0.113.1"]
-  allowed_network_rule_list  = ["rule1", "rule2"]
-  blocked_network_rule_list  = ["rule3", "rule4"]
 }
 
 ```
