@@ -1,3 +1,5 @@
+<img align="right" width="60" height="60" src="images/terraform.png">
+
 # terraform-snowflake-service-accounts
 Terraform Module for Making Service Accounts in Snowflake Securely
 
