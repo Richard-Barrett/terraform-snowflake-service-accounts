@@ -3,7 +3,7 @@ terraform {
   required_providers {
     snowflake = {
       source  = "Snowflake-Labs/snowflake"
-      version = "~> 0.90.0"
+      version = "~> 0.97.0"
     }
     random = {
       source  = "hashicorp/random"
