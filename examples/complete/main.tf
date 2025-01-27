@@ -1,13 +1,17 @@
 terraform {
-  required_version = ">= 1.5.6"
+  required_version = ">= 1.3.6"
   required_providers {
-    null = {
-      source  = "hashicorp/null"
-      version = "~> 3.1.0"
-    }
     snowflake = {
       source  = "Snowflake-Labs/snowflake"
-      version = "~> 0.90.0"
+      version = ">= 1.0.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = ">=3.6.2"
+    }
+    tls = {
+      source  = "hashicorp/tls"
+      version = ">= 4.0.5"
     }
   }
 }
