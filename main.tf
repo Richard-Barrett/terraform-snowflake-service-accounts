@@ -35,18 +35,18 @@ resource "tls_private_key" "rsa_key_2" {
 
 // Manage Snowflake User
 resource "snowflake_user" "this" {
-  depends_on        = [random_password.password]
-  name             = "${upper(var.name)}_SVC_ACCOUNT"
-  password         = random_password.password.result
-  default_role     = var.default_role
-  default_warehouse = var.default_warehouse
-  disabled         = var.disabled
-  default_namespace = var.default_namespace
-  login_name       = var.login_name
-  display_name     = var.display_name
-  first_name       = var.first_name
-  last_name        = var.last_name
-  email            = var.email
+  depends_on           = [random_password.password]
+  name                 = "${upper(var.name)}_SVC_ACCOUNT"
+  password             = random_password.password.result
+  default_role         = var.default_role
+  default_warehouse    = var.default_warehouse
+  disabled             = var.disabled
+  default_namespace    = var.default_namespace
+  login_name           = var.login_name
+  display_name         = var.display_name
+  first_name           = var.first_name
+  last_name            = var.last_name
+  email                = var.email
   must_change_password = var.must_change_password
 
   # Conditionally add RSA public keys if manage_public_keys = true
