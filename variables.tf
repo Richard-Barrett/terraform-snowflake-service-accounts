@@ -89,3 +89,15 @@ variable "allowed_ip_list" {
   type    = list(string)
   default = []
 }
+
+variable "manage_private_keys" {
+  description = "Whether to generate and manage RSA private keys"
+  type        = bool
+  default     = false
+}
+
+variable "manage_public_keys" {
+  description = "Whether to manage public keys for the Snowflake user"
+  type        = bool
+  default     = false
+}

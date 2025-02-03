@@ -10,17 +10,23 @@ output "user_password" {
 }
 
 output "rsa_private_key" {
-  description = "The RSA private key"
-  value       = tls_private_key.rsa_key.private_key_pem
+  description = "The RSA private key (first key)"
+  value       = var.manage_private_keys ? tls_private_key.rsa_key_1[0].private_key_pem : null
   sensitive   = true
 }
 
 output "rsa_public_key" {
   description = "The first RSA public key"
-  value       = tls_private_key.rsa_key.public_key_pem
+  value       = var.manage_private_keys ? tls_private_key.rsa_key_1[0].public_key_pem : null
+}
+
+output "rsa_private_key_2" {
+  description = "The RSA private key (second key)"
+  value       = var.manage_private_keys ? tls_private_key.rsa_key_2[0].private_key_pem : null
+  sensitive   = true
 }
 
 output "rsa_public_key_2" {
   description = "The second RSA public key"
-  value       = tls_private_key.rsa_key_2.public_key_pem
+  value       = var.manage_private_keys ? tls_private_key.rsa_key_2[0].public_key_pem : null
 }
