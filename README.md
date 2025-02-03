@@ -7,9 +7,9 @@ This Terraform module is designed to create a Snowflake user with a set of confi
 
 1. It generates a random password and a pair of RSA keys for the user if `manage_private_keys` and `manage_public_keys` are set to true.
 
-- Both are boolean values and are defaulted to `false` so it doesn't manage keys.
-- This allows you to specify keys in there as `data` values if needed.
-- You can have your terraform just manage public keys if needed or desired.
+   - Both are boolean values and are defaulted to `false` so it doesn't manage keys.
+   - This allows you to specify keys in there as `data` values if needed.
+   - You can have your terraform just manage public keys if needed or desired.
 
 2. It creates a Snowflake user with the following attributes:
    - Name
