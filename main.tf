@@ -3,15 +3,15 @@ terraform {
   required_providers {
     snowflake = {
       source  = "Snowflake-Labs/snowflake"
-      version = "~> 0.90.0"
+      version = ">= 1.0.0"
     }
     random = {
       source  = "hashicorp/random"
-      version = "3.6.2"
+      version = ">=3.6.2"
     }
     tls = {
       source  = "hashicorp/tls"
-      version = "~> 4.0.5"
+      version = ">= 4.0.5"
     }
   }
 }
